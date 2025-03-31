@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-trophy text-blue-600 text-2xl"></i>
+          <span class="text-xl font-bold">ScoreTrack</span>
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="text-blue-600 font-medium">Home</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Sports</a>
+          <a href="#" class="text-gray-600 hover:text-blue-600">Live</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Check Live Sports Scores</h1>
+      <p class="text-lg md:text-xl mb-8">Get real-time updates for football, basketball, cricket and more</p>
+      <a href="#search" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
+        Check Scores Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Search Form -->
+  <div id="search" class="container mx-auto px-4 py-12">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Find Your Team</h2>
+      <form id="scoreForm">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="sport">
+            Sport
+          </label>
+          <select id="sport" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="football">Football</option>
+            <option value="basketball">Basketball</option>
+            <option value="cricket">Cricket</option>
+            <option value="tennis">Tennis</option>
+          </select>
+        </div>
+        <div class="mb-6">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="team">
+            Team Name
+          </label>
+          <input type="text" id="team" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Manchester United" required>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300">
+          <i class="fas fa-search mr-2"></i> Search Scores
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Popular Sports Section -->
+  <div class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-8 text-center text-gray-800">Popular Sports</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition duration-300">
+        <i class="fas fa-futbol text-4xl text-green-600 mb-3"></i>
+        <h3 class="font-bold">Football</h3>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition duration-300">
+        <i class="fas fa-basketball-ball text-4xl text-orange-600 mb-3"></i>
+        <h3 class="font-bold">Basketball</h3>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition duration-300">
+        <i class="fas fa-baseball-ball text-4xl text-red-600 mb-3"></i>
+        <h3 class="font-bold">Baseball</h3>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition duration-300">
+        <i class="fas fa-table-tennis text-4xl text-blue-600 mb-3"></i>
+        <h3 class="font-bold">Tennis</h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
